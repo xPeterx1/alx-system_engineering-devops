@@ -1,0 +1,22 @@
+total 68
+-rw-r--r-- 1 root root 12 Mar 13 08:06 \*
+-rwxr--r-- 1 root root 35 Mar 13 06:43 0-hello_world
+-rwxr-xr-x 1 root root 49 Mar 13 09:57 10-no_more_js
+-rwxr--r-- 1 root root 35 Mar 13 06:54 1-confused_smiley
+-rwxr--r-- 1 root root 28 Mar 13 07:02 2-hellofile
+-rwxr-xr-x 1 root root 41 Mar 13 07:10 3-twofiles
+-rwxr--r-- 1 root root 29 Mar 13 07:15 4-lastlines
+-rwxr--r-- 1 root root 29 Mar 13 07:17 5-firstlines
+-rwxr--r-- 1 root root 38 Mar 13 07:46 6-third_line
+-rwxr--r-- 1 root root 92 Mar 13 08:12 7-file
+-rwxr--r-- 1 root root 38 Mar 13 08:52 8-cwd_state
+-rwxr-xr-x 1 root root 36 Mar 13 09:09 9-duplicate_last_line
+-rw-r--r-- 1 root root 39 Mar 13 07:53 ' \*\'Best
+-rw-r--r-- 1 root root 12 Mar 13 08:13 \*\\'"Best School"\'\\*$\?\*\*\*\*\*\:\)
+-rw-r--r-- 1 root root  0 Mar 13 10:03 du
+-rw-r--r-- 1 root root  0 Mar 13 07:59 f1
+-rw-r--r-- 1 root root  0 Mar 13 07:59 f2
+drwxr-xr-x 2 root root  6 Mar 13 09:58 js
+-rw-r--r-- 1 root root 12 Mar 13 10:03 ls
+-rw-r--r-- 1 root root  7 Mar 13 06:20 README.md
+-rw-r--r-- 1 root root 54 Mar 13 09:10 working
