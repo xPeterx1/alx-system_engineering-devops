@@ -1,2 +1,2 @@
 #!/bin/bash 
-cat list | sort | uniq | fmt -g 10
+cat list | sort | uniq 
