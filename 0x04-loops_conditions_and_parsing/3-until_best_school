@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Counter to keep track of loop iterations
+counter=0
+
+# Loop until counter reaches 10
+until [ $counter -eq 10 ]
+do
+    echo "Best School"
+    # Increment counter
+    ((counter++))
+done
