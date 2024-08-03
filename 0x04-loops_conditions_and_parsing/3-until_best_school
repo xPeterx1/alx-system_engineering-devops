@@ -2,14 +2,14 @@
 # This script displays "Best School" and "Hi" under certain conditions
 
 counter=0
-while [[ counter -lt 10 ]]  # Corrected syntax for the while loop condition
+while[[ counter -lt 10 ]]  
 do
-        if [[ counter -eq 8 ]]; then  # Corrected syntax for the if condition
+        if [[ counter -eq 8 ]]; then  
                 echo "Hi"
-                (( counter++ ))  # Increment counter to avoid infinite loop
+                (( counter++ ))  
                 continue
         fi
         echo "Best School"
-        (( counter++ ))  # Increment counter in every iteration
+        (( counter++ ))  
 done
 

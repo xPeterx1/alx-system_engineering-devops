@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is display
 counter=0
-while[[ $counter -lt 10 ]]
+while [[ $counter -lt 10 ]]
 do
 	if [[ $counter -eq 8 ]];then
 		echo "Hi"
