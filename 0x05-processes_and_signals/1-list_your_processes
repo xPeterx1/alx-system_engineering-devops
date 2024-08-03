@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 #hello
-ps -ef
-pstree -p
+ps -ax -uf
