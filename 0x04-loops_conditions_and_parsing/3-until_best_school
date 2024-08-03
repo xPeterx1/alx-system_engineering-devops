@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
-# Counter to keep track of loop iterations
+# This script displays "Best School" and "Hi" under certain conditions
+
 counter=0
-until [[ counter -eq 10 ]]
+while [[ counter -lt 10 ]]  # Corrected syntax for the while loop condition
 do
-	echo "Best School"
-	((counter++))
+        if [[ counter -eq 8 ]]; then  # Corrected syntax for the if condition
+                echo "Hi"
+                (( counter++ ))  # Increment counter to avoid infinite loop
+                continue
+        fi
+        echo "Best School"
+        (( counter++ ))  # Increment counter in every iteration
 done
+

@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times
-
-counter=10
-
-while [ $counter -gt 0 ]
-	do
-		
-		if [ $counter -eq 1 ]
-		then
-			echo "Hi"
-		fi
-		counter=$(( counter - 1 ))
-		echo "Best School"
-	done
+# This script is display
+counter=0
+while[[ $counter -lt 10 ]]
+do
+	if [[ $counter -eq 8 ]];then
+		echo "Hi"
+		(( counter++ ))
+		continue
+	fi
+	echo "Best School"
+	(( counter++ ))
+done
