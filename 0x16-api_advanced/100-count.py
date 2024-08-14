@@ -16,10 +16,10 @@ def count_words(subreddit, word_list, word_count={}, after=None):
     if sub_info.status_code != 200:
         return None
 
-    info = sub_info.json()
+    enfo = sub_info.json()
 
     hot_l = [child.get("data").get("title")
-             for child in info
+             for child in enfo
              .get("data")
              .get("children")]
     if not hot_l:
@@ -30,18 +30,18 @@ def count_words(subreddit, word_list, word_count={}, after=None):
     if word_count == {}:
         word_count = {word: 0 for word in word_list}
 
-    for title in hot_l:
-        split_words = title.split(' ')
+    for titl in hot_l:
+        ssplit_words = titl.split(' ')
         for word in word_list:
-            for s_word in split_words:
-                if s_word.lower() == word.lower():
+            for ll_word in ssplit_words:
+                if ll_word.lower() == word.lower():
                     word_count[word] += 1
 
-    if not info.get("data").get("after"):
-        sorted_counts = sorted(word_count.items(), key=lambda kv: kv[0])
-        sorted_counts = sorted(word_count.items(),
+    if not enfo.get("data").get("after"):
+        sort_counts = sorted(word_count.items(), key=lambda kv: kv[0])
+        sort_counts = sorted(word_count.items(),
                                key=lambda kv: kv[1], reverse=True)
-        [print('{}: {}'.format(k, v)) for k, v in sorted_counts if v != 0]
+        [print('{}: {}'.format(k, v)) for k, v in sort_counts if v != 0]
     else:
         return count_words(subreddit, word_list, word_count,
-                           info.get("data").get("after"))
+                           enfo.get("data").get("after"))
