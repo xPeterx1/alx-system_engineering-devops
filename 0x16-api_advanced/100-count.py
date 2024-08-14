@@ -17,8 +17,8 @@ def count_words(subreddit, word_list, word_count=[], page_after=None):
             word_count.append(0)
 
     if page_after is None:
-        url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-        r = get(url, headers=headers, allow_redirects=False)
+        urll = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+        r = get(urll, headers=headers, allow_redirects=False)
         if r.status_code == 200:
             for child in r.json()['data']['children']:
                 i = 0
@@ -33,10 +33,10 @@ def count_words(subreddit, word_list, word_count=[], page_after=None):
                 count_words(subreddit, word_list,
                             word_count, r.json()['data']['after'])
     else:
-        url = ('https://www.reddit.com/r/{}/hot.json?after={}'
+        urll = ('https://www.reddit.com/r/{}/hot.json?after={}'
                .format(subreddit,
                        page_after))
-        r = get(url, headers=headers, allow_redirects=False)
+        r = get(urll, headers=headers, allow_redirects=False)
 
         if r.status_code == 200:
             for child in r.json()['data']['children']:
@@ -51,13 +51,13 @@ def count_words(subreddit, word_list, word_count=[], page_after=None):
                 count_words(subreddit, word_list,
                             word_count, r.json()['data']['after'])
             else:
-                dicto = {}
-                for key_word in list(set(word_list)):
-                    i = word_list.index(key_word)
+                dictor = {}
+                for key_wordss in list(set(word_list)):
+                    i = word_list.index(key_wordss)
                     if word_count[i] != 0:
-                        dicto[word_list[i]] = (word_count[i] *
+                        dictor[word_list[i]] = (word_count[i] *
                                                word_list.count(word_list[i]))
 
-                for key, value in sorted(dicto.items(),
+                for key, v in sorted(dictor.items(),
                                          key=lambda x: (-x[1], x[0])):
-                    print('{}: {}'.format(key, value))
+                    print('{}: {}'.format(key, v))
