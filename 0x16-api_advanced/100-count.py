@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ Module for storing the count_words function. """
 from requests import get
