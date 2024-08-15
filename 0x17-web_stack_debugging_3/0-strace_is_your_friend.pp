@@ -1,4 +1,4 @@
-# fix wordpress config file
+# fix wordpress
 
 exec { 'fix_wp_config':
   command => "sed -i 's/phpp/php/g' /var/www/html/wp-settings.php",
