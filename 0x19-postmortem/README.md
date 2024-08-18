@@ -1,6 +1,6 @@
 ### Postmortem: Apache 500 Error Due to WordPress Configuration Issue
 
-![Apache 500 Error Due to WordPress Configuration Issue](./image.jpeg)
+![Apache 500 Error Due to WordPress Configuration Issue](./image.png)
 
 **Issue Summary:**
 
